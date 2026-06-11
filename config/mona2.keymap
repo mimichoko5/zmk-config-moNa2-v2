@@ -256,10 +256,10 @@
 
         layer_10 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans          &trans            &trans         &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT      &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp LG(LEFT)    &kp LG(UP_ARROW)  &kp LG(RIGHT)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                                   &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans          &kt UP_ARROW    &trans     &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans          &trans          &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                             &trans
             >;
         };
     };
