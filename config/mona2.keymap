@@ -44,7 +44,7 @@
         };
 
         Gesture_L11 {
-            bindings = <&lt 3 LC(C)>;
+            bindings = <&lt 10 LC(C)>;
             key-positions = <12 11>;
         };
     };
@@ -251,6 +251,15 @@
 &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+            >;
+        };
+
+        layer_10 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans          &trans            &trans         &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp LG(LEFT)    &kp LG(UP_ARROW)  &kp LG(RIGHT)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                                   &trans
             >;
         };
     };
