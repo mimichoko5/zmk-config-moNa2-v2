@@ -47,6 +47,11 @@
             bindings = <&alt_tab_swap>;
             key-positions = <12 11>;
         };
+
+        Gesture_L12 {
+            bindings = <&lt 2 LC(V)>;
+            key-positions = <13 12 11>;
+        };
     };
 
     macros {
@@ -121,6 +126,7 @@
                 <&mo 10>,
                 <&macro_release>,
                 <&kp LALT>;
+
             label = "ALT_TAB_SWAP";
         };
     };
