@@ -133,6 +133,7 @@
                 <&mo 10>,
                 <&macro_release>,
                 <&kp LALT>;
+
             label = "ALT_TAB_SWAP";
         };
     };
@@ -179,6 +180,7 @@
         };
 
         // 左手ホームロウmod：右手＋親指を押したときだけホールド成立
+
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -192,6 +194,7 @@
         };
 
         // 右手ホームロウmod：左手＋親指を押したときだけホールド成立
+
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -210,10 +213,10 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W          &kp E          &kp R         &kp T                                                       &kp Y        &kp U  &kp I      &kp O    &lt 6 P
-&kp A      &hml LALT S    &hml LCTRL D   &hml LSHFT F  &kp G                                  &kp COLON            &kp H        &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &lt 7 MINUS
-&kp Z      &kp X          &kp C          &kp V         &kp B        &lt 5 TAB                  &kp DOUBLE_QUOTES   &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL  &kp LEFT_WIN   &sk LALT       &lt 2 LANG2   &lt 2 SPACE  &lt_to_layer_0 3 LANG1     &kp BACKSPACE       &lt 1 ENTER                             &lt 3 ESCAPE
+&kp Q      &kp W         &kp E         &kp R         &kp T                                                     &kp Y        &kp U         &kp I         &kp O        &lt 6 P
+&kp A      &hml LALT S   &hml LCTRL D  &hml LSHFT F  &kp G                                  &kp COLON          &kp H        &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &lt 7 MINUS
+&kp Z      &kp X         &kp C         &kp V         &kp B        &lt 4 TAB                 &kp DOUBLE_QUOTES  &kp N        &kp M         &kp COMMA     &kp DOT      &mt RIGHT_SHIFT SLASH
+&kp LCTRL  &kp LEFT_WIN  &sk LALT      &lt 2 LANG2   &lt 2 SPACE  &lt_to_layer_0 3 LANG1    &kp BACKSPACE      &lt 1 ENTER                                           &lt 3 ESCAPE
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -232,12 +235,13 @@
         //   @  = LBKT   [  = RBKT   ] = BSLH   { = LS(RBKT)   } = LS(BSLH)
         //   (  = LS(N8) )  = LS(N9) ;  = SEMI  : = SQT        / = SLASH
         //   _  = LS(INT3)  \= INT1  ` = LS(LBKT)  ^ = EQUAL  ~ = LS(EQUAL)
+
         layer_1 {
             bindings = <
-&trans               &kp LS(N6)  &kp LS(SQT)  &trans      &trans                    &trans   &kp LBKT     &kp RBKT     &kp BSLH     &trans
-&kp LS(LBKT)         &kp DOLLAR  &kp PERCENT  &kp EQUAL   &trans            &kp SEMI &kp SQT  &kp LS(N8)   &kp LS(N9)   &kp SLASH    &kp LS(INT3)
-&mt LSHFT LS(EQUAL)  &kp EXCL    &trans       &kp HASH    &trans  &trans    &kp INT1 &trans   &kp LS(RBKT) &kp LS(BSLH) &trans       &trans
-&trans               &kt LT      &trans       &trans      &trans  &trans    &trans   &trans                                           &trans
+&trans               &kp LS(N6)  &kp LS(SQT)  &trans     &trans                      &trans   &kp LBKT      &kp RBKT      &kp BSLH   &trans
+&kp LS(LBKT)         &kp DOLLAR  &kp PERCENT  &kp EQUAL  &trans            &kp SEMI  &kp SQT  &kp LS(N8)    &kp LS(N9)    &kp SLASH  &kp LS(INT3)
+&mt LSHFT LS(EQUAL)  &kp EXCL    &trans       &kp HASH   &trans  &trans    &kp INT1  &trans   &kp LS(RBKT)  &kp LS(BSLH)  &trans     &trans
+&trans               &kt LT      &trans       &trans     &trans  &trans    &trans    &trans                                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LA(TAB) LS(LA(TAB))>;
@@ -259,12 +263,13 @@
         // 左手中段: PgUp Win+← Win+↓ Win+→ Ctrl+Win+PrtSc
         // 左手下段: PgDown
         // 右手: 矢印/Home/End
+
         layer_3 {
             bindings = <
-&kp ESC      &kp F2        &kp F4           &kp LG(UP_ARROW)  &trans                                       &trans  &kp HOME        &kp UP_ARROW    &kp END          &trans
-&kp PAGE_UP  &kp LG(LEFT)  &kp LG(DOWN)     &kp LG(RIGHT)     &kp LC(LG(PRINTSCREEN))  &trans              &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&kp PAGE_DOWN &trans       &trans           &trans            &trans         &trans    &kp LS(PRINTSCREEN) &trans  &trans          &trans          &trans           &trans
-&trans       &trans        &trans           &trans            &trans         &trans    &kp DEL              &trans                                                   &trans
+&kp F2  &kp F4        &kp LG(UP_ARROW)  &trans         &trans                                                  &trans  &kp HOME        &kp UP_ARROW    &kp END          &trans
+&trans  &kp LG(LEFT)  &kp LG(DOWN)      &kp LG(RIGHT)  &kp LC(LG(PRINTSCREEN))            &trans               &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&trans  &kp ESC       &kp PAGE_DOWN     &kp PAGE_DOWN  &trans                   &trans    &kp LS(PRINTSCREEN)  &trans  &trans          &kp DOWN_ARROW  &trans           &trans
+&trans  &trans        &trans            &trans         &trans                   &trans    &kp DEL              &trans                                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB))>;
