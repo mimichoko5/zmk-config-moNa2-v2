@@ -51,13 +51,13 @@
         left_click {
             bindings = <&mkp MB1>;
             key-positions = <17 18>;
-            layers = <0>;
+            layers = <0 5>;
         };
 
         right_click {
             bindings = <&mkp MB2>;
             key-positions = <18 19>;
-            layers = <0>;
+            layers = <0 5>;
         };
     };
 
