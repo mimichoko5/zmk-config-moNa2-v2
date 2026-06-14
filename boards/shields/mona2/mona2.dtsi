@@ -1,6 +1,4 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <dt-bindings/zmk/keys.h>
-#include <behaviors.dtsi>
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 #include <physical_layouts.dtsi>
@@ -125,12 +123,6 @@
 
     layer_listeners {
         compatible = "zmk,layer-listeners";
-
-        // Layer 2 に入ったら英数(LANGUAGE_2)に切替、抜けても英数のまま
-        eisuu_on_l2 {
-            layers = <2>;
-            bindings = <&kp LANGUAGE_2 &none>;
-        };
 
         // Layer 7 に入ったらジェスチャーON、抜けたらOFF
         gesture_on_l7 {

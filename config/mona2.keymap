@@ -20,6 +20,16 @@
 };
 
 / {
+    // Layer 2 に入ったら英数(LANGUAGE_2)に切替、抜けても英数のまま
+    eisuu_listeners {
+        compatible = "zmk,layer-listeners";
+
+        eisuu_on_l2 {
+            layers = <2>;
+            bindings = <&kp LANGUAGE_2 &none>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
