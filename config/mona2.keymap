@@ -228,7 +228,7 @@
 &kp ESC  &kp LEFT_WIN  &mo 1         &trans        &lt 2 TAB  &kp BACKSPACE    &kp ENTER       &lt 3 SPACE                                           &hmr RIGHT_ALT RIGHT_BRACKET
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp LC(K_SCROLL_UP) LC(K_SCROLL_DOWN)>;
         };
 
         // Layer 1: 記号 (JIS)
