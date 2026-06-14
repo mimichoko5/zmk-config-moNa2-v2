@@ -47,6 +47,18 @@
             bindings = <&alt_tab_swap>;
             key-positions = <12 11>;
         };
+
+        nav_back {
+            bindings = <&kp LA(LEFT)>;
+            key-positions = <12 13 17>;
+            layers = <0>;
+        };
+
+        nav_forward {
+            bindings = <&kp LA(RIGHT)>;
+            key-positions = <12 13 18>;
+            layers = <0>;
+        };
     };
 
     macros {
