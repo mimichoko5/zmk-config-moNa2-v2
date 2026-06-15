@@ -286,7 +286,7 @@
         layer_3 {
             bindings = <
 &trans        &trans              &kp LG(UP_ARROW)     &trans                &trans                           &trans  &kp RC(HOME)    &kp UP_ARROW    &kp RC(END)      &trans
-&kp RCTRL     &hml LALT LG(LEFT)  &hml LSHFT LG(DOWN)  &hml LCTRL LG(RIGHT)  &trans                   &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&kp RCTRL     &kp LG(LEFT)        &kp LG(DOWN)         &kp LG(RIGHT)         &trans                   &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
 &kp LSHIFT    &trans              &trans               &trans                &trans         &trans    &trans  &trans  &trans          &kp DOWN_ARROW  &trans           &trans
 &kp LEFT_ALT  &trans              &trans               &trans                &kp BACKSPACE  &trans    &trans  &trans                                                   &trans
             >;
