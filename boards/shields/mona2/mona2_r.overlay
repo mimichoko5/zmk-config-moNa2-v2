@@ -63,17 +63,19 @@
     };
 };
 
+/*
 &zip_temp_layer {
     excluded-positions = <38>;  // MOUSEレイヤーのクリックキー(38:&mkp MB1)。押してもAMLを解除しない
     require-prior-idle-ms = <300>;  // 好きなmsに調整（例: 300ms）
 };
+*/
 
 // Overrides for the input listener node
 &trackball_central_listener {
     status = "okay";
     device = <&trackball_central>;
 
-    input-processors = <&zip_temp_layer 5 10000>; 
+    //input-processors = <&zip_temp_layer 5 10000>; // AML無効化
 
     disable_on_l3 {
         layers = <3>;
