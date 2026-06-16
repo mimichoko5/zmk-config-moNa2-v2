@@ -58,18 +58,6 @@
             bindings = <&alt_tab_swap>;
             key-positions = <12 11>;
         };
-
-        nav_back {
-            bindings = <&kp LA(LEFT)>;
-            key-positions = <12 13 17>;
-            layers = <0>;
-        };
-
-        nav_forward {
-            bindings = <&kp LA(RIGHT)>;
-            key-positions = <12 13 18>;
-            layers = <0>;
-        };
     };
 
     macros {
@@ -286,10 +274,10 @@
 
         layer_3 {
             bindings = <
-&trans  &trans        &kp LG(UP_ARROW)  &trans         &trans                    &trans  &kp RC(HOME)    &kp UP_ARROW    &kp RC(END)      &kp BACKSPACE
-&trans  &kp LG(LEFT)  &kp LG(DOWN)      &kp LG(RIGHT)  &trans            &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp ENTER
-&trans  &trans        &trans            &trans         &trans  &trans    &trans  &trans  &kp LA(LEFT)    &kp DOWN_ARROW  &kp RA(RIGHT)    &trans
-&trans  &trans        &trans            &trans         &trans  &trans    &trans  &trans                                                   &trans
+&trans  &trans        &kp LG(UP_ARROW)  &trans         &trans                       &trans  &kp RC(HOME)    &kp UP_ARROW    &kp RC(END)      &kp BACKSPACE
+&trans  &kp LG(LEFT)  &kp LG(DOWN)      &kp LG(RIGHT)  &trans               &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp ENTER
+&trans  &trans        &trans            &trans         &trans     &trans    &trans  &trans  &kp LA(LEFT)    &kp DOWN_ARROW  &kp RA(RIGHT)    &kp ESC
+&trans  &trans        &trans            &trans         &kp LCTRL  &trans    &trans  &trans                                                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
