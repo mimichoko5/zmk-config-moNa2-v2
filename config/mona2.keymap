@@ -199,45 +199,10 @@
             tap-ms = <5>;
             label = "MAIL_REPLY";
             bindings =
-                // IMEを英数モードへ（全角化防止）
-                <&macro_tap>, <&kp LANG2>,
-                // 以降すべてタップモード（press+release）で送出
                 <&macro_tap>,
-                // #Instruction   （# は JIS では Shift+3 = LS(N3)）
-                <&kp LS(N3)>,
-                <&kp I>, <&kp N>, <&kp S>, <&kp T>, <&kp R>, <&kp U>, <&kp C>, <&kp T>, <&kp I>, <&kp O>, <&kp N>,
-                <&kp LS(ENTER)>,
-                // Read the Japanese email below and draft a reply.
-                <&kp R>, <&kp E>, <&kp A>, <&kp D>, <&kp SPACE>,
-                <&kp T>, <&kp H>, <&kp E>, <&kp SPACE>,
-                <&kp J>, <&kp A>, <&kp P>, <&kp A>, <&kp N>, <&kp E>, <&kp S>, <&kp E>, <&kp SPACE>,
-                <&kp E>, <&kp M>, <&kp A>, <&kp I>, <&kp L>, <&kp SPACE>,
-                <&kp B>, <&kp E>, <&kp L>, <&kp O>, <&kp W>, <&kp SPACE>,
-                <&kp A>, <&kp N>, <&kp D>, <&kp SPACE>,
-                <&kp D>, <&kp R>, <&kp A>, <&kp F>, <&kp T>, <&kp SPACE>,
-                <&kp A>, <&kp SPACE>,
-                <&kp R>, <&kp E>, <&kp P>, <&kp L>, <&kp Y>, <&kp DOT>,
-                <&kp LS(ENTER)>,
-                // Reply in polite Japanese.
-                <&kp R>, <&kp E>, <&kp P>, <&kp L>, <&kp Y>, <&kp SPACE>,
-                <&kp I>, <&kp N>, <&kp SPACE>,
-                <&kp P>, <&kp O>, <&kp L>, <&kp I>, <&kp T>, <&kp E>, <&kp SPACE>,
-                <&kp J>, <&kp A>, <&kp P>, <&kp A>, <&kp N>, <&kp E>, <&kp S>, <&kp E>, <&kp DOT>,
-                <&kp LS(ENTER)>,
-                // 空行
-                <&kp LS(ENTER)>,
-                // #Policy
-                <&kp LS(N3)>,
-                <&kp P>, <&kp O>, <&kp L>, <&kp I>, <&kp C>, <&kp Y>,
-                <&kp LS(ENTER)>,
-                // 空行（ユーザーが方針を手動記入する欄）
-                <&kp LS(ENTER)>,
-                // #Email
-                <&kp LS(N3)>,
-                <&kp E>, <&kp M>, <&kp A>, <&kp I>, <&kp L>,
-                <&kp LS(ENTER)>,
-                // クリップボード（受信メール本文）を貼り付け
-                <&kp LC(V)>;
+                <&kp LANG2>,
+                <&macro_tap>,
+                <&kp LS(N3) &kp I &kp N &kp S &kp T &kp R &kp U &kp C &kp T &kp I &kp O &kp N &kp LS(ENTER) &kp R &kp E &kp A &kp D &kp SPACE &kp T &kp H &kp E &kp SPACE &kp J &kp A &kp P &kp A &kp N &kp E &kp S &kp E &kp SPACE &kp E &kp M &kp A &kp I &kp L &kp SPACE &kp B &kp E &kp L &kp O &kp W &kp SPACE &kp A &kp N &kp D &kp SPACE &kp D &kp R &kp A &kp F &kp T &kp SPACE &kp A &kp SPACE &kp R &kp E &kp P &kp L &kp Y &kp DOT &kp LS(ENTER) &kp R &kp E &kp P &kp L &kp Y &kp SPACE &kp I &kp N &kp SPACE &kp P &kp O &kp L &kp I &kp T &kp E &kp SPACE &kp J &kp A &kp P &kp A &kp N &kp E &kp S &kp E &kp DOT &kp LS(ENTER) &kp LS(ENTER) &kp LS(N3) &kp P &kp O &kp L &kp I &kp C &kp Y &kp LS(ENTER) &kp LS(ENTER) &kp LS(N3) &kp E &kp M &kp A &kp I &kp L &kp LS(ENTER) &kp LC(V)>;
         };
 
         // メール返信用プロンプト挿入マクロ（# 省略版 / 記号ズレ回避）
@@ -249,35 +214,10 @@
             tap-ms = <5>;
             label = "MAIL_REPLY_NOHASH";
             bindings =
-                <&macro_tap>, <&kp LANG2>,
                 <&macro_tap>,
-                // Instruction
-                <&kp I>, <&kp N>, <&kp S>, <&kp T>, <&kp R>, <&kp U>, <&kp C>, <&kp T>, <&kp I>, <&kp O>, <&kp N>,
-                <&kp LS(ENTER)>,
-                <&kp R>, <&kp E>, <&kp A>, <&kp D>, <&kp SPACE>,
-                <&kp T>, <&kp H>, <&kp E>, <&kp SPACE>,
-                <&kp J>, <&kp A>, <&kp P>, <&kp A>, <&kp N>, <&kp E>, <&kp S>, <&kp E>, <&kp SPACE>,
-                <&kp E>, <&kp M>, <&kp A>, <&kp I>, <&kp L>, <&kp SPACE>,
-                <&kp B>, <&kp E>, <&kp L>, <&kp O>, <&kp W>, <&kp SPACE>,
-                <&kp A>, <&kp N>, <&kp D>, <&kp SPACE>,
-                <&kp D>, <&kp R>, <&kp A>, <&kp F>, <&kp T>, <&kp SPACE>,
-                <&kp A>, <&kp SPACE>,
-                <&kp R>, <&kp E>, <&kp P>, <&kp L>, <&kp Y>, <&kp DOT>,
-                <&kp LS(ENTER)>,
-                <&kp R>, <&kp E>, <&kp P>, <&kp L>, <&kp Y>, <&kp SPACE>,
-                <&kp I>, <&kp N>, <&kp SPACE>,
-                <&kp P>, <&kp O>, <&kp L>, <&kp I>, <&kp T>, <&kp E>, <&kp SPACE>,
-                <&kp J>, <&kp A>, <&kp P>, <&kp A>, <&kp N>, <&kp E>, <&kp S>, <&kp E>, <&kp DOT>,
-                <&kp LS(ENTER)>,
-                <&kp LS(ENTER)>,
-                // Policy
-                <&kp P>, <&kp O>, <&kp L>, <&kp I>, <&kp C>, <&kp Y>,
-                <&kp LS(ENTER)>,
-                <&kp LS(ENTER)>,
-                // Email
-                <&kp E>, <&kp M>, <&kp A>, <&kp I>, <&kp L>,
-                <&kp LS(ENTER)>,
-                <&kp LC(V)>;
+                <&kp LANG2>,
+                <&macro_tap>,
+                <&kp I &kp N &kp S &kp T &kp R &kp U &kp C &kp T &kp I &kp O &kp N &kp LS(ENTER) &kp R &kp E &kp A &kp D &kp SPACE &kp T &kp H &kp E &kp SPACE &kp J &kp A &kp P &kp A &kp N &kp E &kp S &kp E &kp SPACE &kp E &kp M &kp A &kp I &kp L &kp SPACE &kp B &kp E &kp L &kp O &kp W &kp SPACE &kp A &kp N &kp D &kp SPACE &kp D &kp R &kp A &kp F &kp T &kp SPACE &kp A &kp SPACE &kp R &kp E &kp P &kp L &kp Y &kp DOT &kp LS(ENTER) &kp R &kp E &kp P &kp L &kp Y &kp SPACE &kp I &kp N &kp SPACE &kp P &kp O &kp L &kp I &kp T &kp E &kp SPACE &kp J &kp A &kp P &kp A &kp N &kp E &kp S &kp E &kp DOT &kp LS(ENTER) &kp LS(ENTER) &kp P &kp O &kp L &kp I &kp C &kp Y &kp LS(ENTER) &kp LS(ENTER) &kp E &kp M &kp A &kp I &kp L &kp LS(ENTER) &kp LC(V)>;
         };
     };
 
@@ -489,10 +429,10 @@
 
         layer_10 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &kp UP_ARROW    &trans           &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &kp LEFT_ARROW  &kp J  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans          &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                           &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &kp UP_ARROW    &trans           &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans          &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                             &trans
             >;
         };
     };
