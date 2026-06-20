@@ -135,6 +135,38 @@
 
             label = "ALT_TAB_SWAP";
         };
+
+        col_insert_macro: col_insert_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings = <&macro_tap>, <&kp LC(SPACE)>, <&macro_tap>, <&kp LC(LS(EQUAL))>;
+        };
+
+        col_delete_macro: col_delete_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings = <&macro_tap>, <&kp LC(SPACE)>, <&macro_tap>, <&kp LC(MINUS)>;
+        };
+
+        row_insert_macro: row_insert_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings = <&macro_tap>, <&kp LS(SPACE)>, <&macro_tap>, <&kp LC(LS(EQUAL))>;
+        };
+
+        row_delete_macro: row_delete_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings = <&macro_tap>, <&kp LS(SPACE)>, <&macro_tap>, <&kp LC(MINUS)>;
+        };
     };
 
     behaviors {

@@ -8,9 +8,9 @@
     idle-timeout-ms = <100>;
     gesture-cooldown-ms = <120>;
 
-    col_insert { pattern = <GESTURE_UP>;    bindings = <&kp LC(LS(EQUAL))>; }; // 列追加
-    col_delete { pattern = <GESTURE_DOWN>;  bindings = <&kp LC(MINUS)>;     }; // 列削除
-    row_delete { pattern = <GESTURE_RIGHT>; bindings = <&kp LC(MINUS)>;     }; // 行削除
-    row_insert { pattern = <GESTURE_LEFT>;  bindings = <&kp LC(LS(EQUAL))>; }; // 行追加
+    col_insert { pattern = <GESTURE_UP>;    bindings = <&col_insert_macro>; }; // 列全選択→列追加
+    col_delete { pattern = <GESTURE_DOWN>;  bindings = <&col_delete_macro>; }; // 列全選択→列削除
+    row_delete { pattern = <GESTURE_RIGHT>; bindings = <&row_delete_macro>; }; // 行全選択→行削除
+    row_insert { pattern = <GESTURE_LEFT>;  bindings = <&row_insert_macro>; }; // 行全選択→行追加
   };
 };
