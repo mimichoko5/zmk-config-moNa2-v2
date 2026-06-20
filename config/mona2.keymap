@@ -29,6 +29,11 @@
             layers = <2>;
             bindings = <&kp LANGUAGE_2 &none>;
         };
+
+        eisuu_on_l8 {
+            layers = <8>;
+            bindings = <&kp LANGUAGE_2 &none>;
+        };
     };
 
     combos {
@@ -139,8 +144,8 @@
         col_insert_macro: col_insert_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <30>;
+            wait-ms = <100>;
+            tap-ms = <50>;
             bindings =
                 <&macro_tap>,
                 <&kp LC(SPACE)>,
@@ -151,8 +156,8 @@
         col_delete_macro: col_delete_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <30>;
+            wait-ms = <100>;
+            tap-ms = <50>;
             bindings =
                 <&macro_tap>,
                 <&kp LC(SPACE)>,
@@ -163,8 +168,8 @@
         row_insert_macro: row_insert_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <30>;
+            wait-ms = <100>;
+            tap-ms = <50>;
             bindings =
                 <&macro_tap>,
                 <&kp LS(SPACE)>,
@@ -175,8 +180,8 @@
         row_delete_macro: row_delete_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <30>;
+            wait-ms = <100>;
+            tap-ms = <50>;
             bindings =
                 <&macro_tap>,
                 <&kp LS(SPACE)>,
