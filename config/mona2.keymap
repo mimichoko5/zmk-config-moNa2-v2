@@ -190,13 +190,13 @@
         };
 
         // メール返信用プロンプト挿入マクロ（# あり版 / JIS配列・Windows）
-        // 取りこぼす場合は wait-ms / tap-ms を 10 に上げる
+        // 取りこぼす場合は wait-ms / tap-ms を 30 に上げる
 
         mail_reply: mail_reply {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <5>;
-            tap-ms = <5>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             label = "MAIL_REPLY";
             bindings =
                 <&macro_tap>,
@@ -210,8 +210,8 @@
         mail_reply_nohash: mail_reply_nohash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <5>;
-            tap-ms = <5>;
+            wait-ms = <20>;
+            tap-ms = <20>;
             label = "MAIL_REPLY_NOHASH";
             bindings =
                 <&macro_tap>,
