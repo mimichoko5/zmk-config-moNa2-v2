@@ -391,7 +391,7 @@
 
         SCROLL {
             bindings = <
-&kp LC(LS(S))  &trans  &trans  &trans  &trans                    &trans         &trans  &trans  &trans  &trans
+&kp LS(LG(S))  &trans  &trans  &trans  &trans                    &trans         &trans  &trans  &trans  &trans
 &trans         &trans  &trans  &trans  &trans            &trans  &kp RA(LEFT)   &trans  &trans  &trans  &trans
 &trans         &trans  &trans  &trans  &trans  &trans    &trans  &kp RA(RIGHT)  &trans  &trans  &trans  &trans
 &trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans                                 &trans
