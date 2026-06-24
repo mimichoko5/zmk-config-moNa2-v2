@@ -8,7 +8,9 @@
     idle-timeout-ms = <100>;
     gesture-cooldown-ms = <120>;
 
-    copy  { pattern = <GESTURE_LEFT>;  bindings = <&kp LC(C)>; };
-    paste { pattern = <GESTURE_RIGHT>; bindings = <&kp LC(V)>; };
+    col_insert { pattern = <GESTURE_UP>;    bindings = <&col_insert_macro>; }; // 列全選択→列追加
+    col_delete { pattern = <GESTURE_DOWN>;  bindings = <&col_delete_macro>; }; // 列全選択→列削除
+    row_delete { pattern = <GESTURE_RIGHT>; bindings = <&row_delete_macro>; }; // 行全選択→行削除
+    row_insert { pattern = <GESTURE_LEFT>;  bindings = <&row_insert_macro>; }; // 行全選択→行追加
   };
 };
