@@ -99,7 +99,9 @@
 
         scroll_on_l6 {
             layers = <6>;
-            input-processors = <&zip_xy_scaler 1 16
+            // X軸を0倍にして上下スクロールのみ有効化
+            input-processors = <&zip_x_scaler 0 1
+                            &zip_xy_scaler 1 16
                             &zip_xy_transform INPUT_TRANSFORM_Y_INVERT
                             &zip_xy_to_scroll_mapper>;
         };
