@@ -8,9 +8,8 @@
     idle-timeout-ms = <100>;
     gesture-cooldown-ms = <120>;
 
-    col_insert { pattern = <GESTURE_UP>;    bindings = <&col_insert_macro>; }; // 列全選択→列追加
-    col_delete { pattern = <GESTURE_DOWN>;  bindings = <&col_delete_macro>; }; // 列全選択→列削除
-    paste      { pattern = <GESTURE_RIGHT>; bindings = <&kp LC(V)>; };         // 右スクロール→貼り付け
-    copy       { pattern = <GESTURE_LEFT>;  bindings = <&kp LC(C)>; };         // 左スクロール→コピー
+    // 上下(GESTURE_UP/DOWN)は何もしない(ノード未定義=無効)
+    paste { pattern = <GESTURE_RIGHT>; bindings = <&kp LC(V)>; }; // 右スクロール→貼り付け
+    copy  { pattern = <GESTURE_LEFT>;  bindings = <&kp LC(C)>; }; // 左スクロール→コピー
   };
 };
