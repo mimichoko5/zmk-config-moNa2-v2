@@ -9,7 +9,7 @@
     gesture-cooldown-ms = <120>;
 
     // 上下(GESTURE_UP/DOWN)は何もしない(ノード未定義=無効)
-    paste { pattern = <GESTURE_RIGHT>; bindings = <&kp LC(V)>; }; // 右スクロール→貼り付け
-    copy  { pattern = <GESTURE_LEFT>;  bindings = <&kp LC(C)>; }; // 左スクロール→コピー
+    copy  { pattern = <GESTURE_RIGHT>; bindings = <&kp LC(C)>; }; // 右スクロール→コピー
+    paste { pattern = <GESTURE_LEFT>;  bindings = <&kp LC(V)>; }; // 左スクロール→貼り付け
   };
 };
