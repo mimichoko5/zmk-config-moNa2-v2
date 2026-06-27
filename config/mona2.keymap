@@ -71,6 +71,11 @@
 
         mail {
             bindings = <&mail_reply>;
+            key-positions = <3 2>;
+        };
+
+        ESC_key {
+            bindings = <&kp ESC>;
             key-positions = <0 1>;
         };
     };
@@ -401,10 +406,10 @@
 
         SCROLL {
             bindings = <
-&kp LS(LG(S))  &trans  &trans  &trans  &trans                    &trans         &trans  &trans  &trans  &trans
-&trans         &trans  &trans  &trans  &trans            &trans  &kp RA(LEFT)   &trans  &trans  &trans  &trans
-&trans         &trans  &trans  &trans  &trans  &trans    &trans  &kp RA(RIGHT)  &trans  &trans  &trans  &trans
-&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans                                 &trans
+&kp LS(LG(S))  &trans  &trans  &trans  &trans                    &trans  &trans        &trans         &trans  &trans
+&trans         &trans  &trans  &trans  &trans            &trans  &trans  &kp LA(LEFT)  &kp LA(RIGHT)  &trans  &trans
+&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans         &trans  &trans
+&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans                                       &trans
             >;
 
             sensor-bindings = <&scroll_right_left>;
