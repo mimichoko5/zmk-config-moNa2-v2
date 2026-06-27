@@ -5,7 +5,7 @@
     // eager-mode は使わずストローク確定後に1回だけ発火させ、強弱による二重発火を防ぐ
     stroke-size = <8>;            // 1スワイプを1ストロークに（強い操作での分割を抑制）
     movement-threshold = <6>;
-    idle-timeout-ms = <30>;       // ストローク確定後の発火を高速化
+    idle-timeout-ms = <100>;
     gesture-cooldown-ms = <300>;  // 発火直後の二重発火を抑止
 
     // 上下(GESTURE_UP/DOWN)は何もしない(ノード未定義=無効)

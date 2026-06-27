@@ -42,13 +42,11 @@
         Gesture_L8 {
             bindings = <&lt 8 LA(TAB)>;
             key-positions = <8 9>;
-            timeout-ms = <30>;
         };
 
         Gesture_L9 {
             bindings = <&lt 9 LEFT_WIN>;
             key-positions = <19 20>;
-            timeout-ms = <30>;
         };
 
         a {
@@ -59,25 +57,21 @@
         Gesture_L10 {
             bindings = <&lt 5 LC(C)>;
             key-positions = <13 12>;
-            timeout-ms = <30>;
         };
 
         Gesture_L11 {
             bindings = <&alt_tab_swap>;
             key-positions = <12 11>;
-            timeout-ms = <30>;
         };
 
         Tab {
             bindings = <&kp TAB>;
             key-positions = <18 19>;
-            timeout-ms = <30>;
         };
 
         mail {
             bindings = <&mail_reply>;
             key-positions = <0 1>;
-            timeout-ms = <30>;
         };
     };
 
