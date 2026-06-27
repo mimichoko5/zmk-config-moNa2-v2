@@ -12,8 +12,8 @@
 &pointer_accel {
     input-type = <INPUT_EV_REL>;
     track-remainders;            // 小数移動量を蓄積して精度向上
-    min-factor = <800>;          // 低速は0.8倍に抑え精密操作
-    max-factor = <3000>;         // 高速は3.0倍まで加速
+    min-factor = <500>;          // 低速はより縮小(0.5倍)し精密操作を強化
+    max-factor = <4500>;         // 高速はより拡張(4.5倍)まで加速
     speed-threshold = <1200>;    // 1200 counts/sec から加速開始
     speed-max = <6000>;          // 6000 counts/sec で最大
     acceleration-exponent = <2>; // 2次カーブ
