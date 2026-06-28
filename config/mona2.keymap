@@ -164,54 +164,6 @@
             label = "ALT_TAB_SWAP";
         };
 
-        col_insert_macro: col_insert_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <100>;
-            tap-ms = <50>;
-            bindings =
-                <&macro_tap>,
-                <&kp LC(SPACE)>,
-                <&macro_tap>,
-                <&kp LC(LS(EQUAL))>;
-        };
-
-        col_delete_macro: col_delete_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <100>;
-            tap-ms = <50>;
-            bindings =
-                <&macro_tap>,
-                <&kp LC(SPACE)>,
-                <&macro_tap>,
-                <&kp LC(MINUS)>;
-        };
-
-        row_insert_macro: row_insert_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <100>;
-            tap-ms = <50>;
-            bindings =
-                <&macro_tap>,
-                <&kp LS(SPACE)>,
-                <&macro_tap>,
-                <&kp LC(LS(EQUAL))>;
-        };
-
-        row_delete_macro: row_delete_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <100>;
-            tap-ms = <50>;
-            bindings =
-                <&macro_tap>,
-                <&kp LS(SPACE)>,
-                <&macro_tap>,
-                <&kp LC(MINUS)>;
-        };
-
         // メール返信用プロンプト挿入マクロ（# あり版 / JIS配列・Windows）
         // 取りこぼす場合は wait-ms / tap-ms を 30 に上げる
 
