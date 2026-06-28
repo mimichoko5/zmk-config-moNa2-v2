@@ -42,41 +42,49 @@
         Gesture_L8 {
             bindings = <&lt 8 LA(TAB)>;
             key-positions = <8 9>;
+            require-prior-idle-ms = <150>;
         };
 
         Gesture_L9 {
             bindings = <&lt 9 LEFT_WIN>;
             key-positions = <19 20>;
+            require-prior-idle-ms = <150>;
         };
 
         a {
             bindings = <&none>;
             key-positions = <17 29 18 19 31 10 21>;
+            require-prior-idle-ms = <150>;
         };
 
         Gesture_L10 {
             bindings = <&lt 5 LC(C)>;
             key-positions = <13 12>;
+            require-prior-idle-ms = <150>;
         };
 
         Gesture_L11 {
             bindings = <&alt_tab_swap>;
             key-positions = <12 11>;
+            require-prior-idle-ms = <150>;
         };
 
         Tab {
             bindings = <&kp TAB>;
             key-positions = <18 19>;
+            require-prior-idle-ms = <150>;
         };
 
         mail {
             bindings = <&mail_reply>;
             key-positions = <3 2>;
+            require-prior-idle-ms = <150>;
         };
 
         ESC_key {
             bindings = <&kp ESC>;
             key-positions = <0 1>;
+            require-prior-idle-ms = <150>;
         };
     };
 
