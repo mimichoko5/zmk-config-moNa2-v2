@@ -2,15 +2,14 @@
   zip_mouse_gesture_l8: zip_mouse_gesture_l8 {
     compatible = "zmk,input-processor-mouse-gesture";
     #input-processor-cells = <0>;
-    enable-eager-mode;
-    stroke-size = <5>;
+    // eager-mode は使わずストローク確定後に1回だけ発火させ、強弱による二重発火を防ぐ
+    stroke-size = <8>;            // 1スワイプを1ストロークに（強い操作での分割を抑制）
     movement-threshold = <6>;
     idle-timeout-ms = <100>;
-    gesture-cooldown-ms = <120>;
+    gesture-cooldown-ms = <300>;  // 発火直後の二重発火を抑止
 
-    col_insert { pattern = <GESTURE_UP>;    bindings = <&col_insert_macro>; }; // 列全選択→列追加
-    col_delete { pattern = <GESTURE_DOWN>;  bindings = <&col_delete_macro>; }; // 列全選択→列削除
-    row_delete { pattern = <GESTURE_RIGHT>; bindings = <&row_delete_macro>; }; // 行全選択→行削除
-    row_insert { pattern = <GESTURE_LEFT>;  bindings = <&row_insert_macro>; }; // 行全選択→行追加
+    // 上下(GESTURE_UP/DOWN)は何もしない(ノード未定義=無効)
+    copy  { pattern = <GESTURE_RIGHT>; bindings = <&kp LC(C)>; }; // 右スクロール→コピー
+    paste { pattern = <GESTURE_LEFT>;  bindings = <&kp LC(V)>; }; // 左スクロール→貼り付け
   };
 };

@@ -1,6 +1,23 @@
 #include "mona2.dtsi"
 #include <input/processors.dtsi>
+#include <behaviors/input_gestures_accel.dtsi>   // Pointer Acceleration モジュール
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+
+// レイヤー0のカーソル加速パラメータ（速度依存）
+// min-factor/max-factor は1000=1.0倍の千分率。
+//   低速時 min-factor 倍、高速時 max-factor 倍に変化
+// speed-threshold: 加速が始まる速度(counts/sec)
+// speed-max:       max-factor に達する速度(counts/sec)
+// acceleration-exponent: 1=線形, 2=2次(急), 3=3次
+&pointer_accel {
+    input-type = <INPUT_EV_REL>;
+    track-remainders;            // 小数移動量を蓄積して精度向上
+    min-factor = <500>;          // 低速はより縮小(0.5倍)し精密操作を強化
+    max-factor = <4500>;         // 高速はより拡張(4.5倍)まで加速
+    speed-threshold = <1200>;    // 1200 counts/sec から加速開始
+    speed-max = <6000>;          // 6000 counts/sec で最大
+    acceleration-exponent = <2>; // 2次カーブ
+};
 
 
 &default_transform {
@@ -76,6 +93,12 @@
     device = <&trackball_central>;
 
     //input-processors = <&zip_temp_layer 5 10000>; // AML無効化
+
+    // Layer 0: 速度依存のカーソル加速
+    accel_on_l0 {
+        layers = <0>;
+        input-processors = <&pointer_accel>;
+    };
 
     disable_on_l3 {
         layers = <3>;
