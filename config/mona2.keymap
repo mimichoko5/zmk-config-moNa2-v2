@@ -328,9 +328,9 @@
 
         layer_3 {
             bindings = <
-&kp LS(N1)     &kp LC(N1)    &kp LG(E)     &kp F4     &kp F12                              &kp RC(Y)      &kp RC(HOME)    &kp UP_ARROW    &kp RC(END)      &kp LBKT
-&kp LC(A)      &trans        &kp LG(D)     &trans     &trans                &kp BACKSPACE  &kp LS(N1)     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&trans         &trans        &kp LC(C)     &kp LC(V)  &trans   &trans       &kp DEL        &kp LA(SLASH)  &trans          &kp RC(MINUS)   &kp RC(COLON)    &trans
+&kp LS(N1)     &kp LC(W)     &kp LG(E)     &kp F3     &kp F12                              &kp RC(Y)      &kp RC(HOME)    &kp UP_ARROW    &kp RC(END)      &kp LBKT
+&kp LC(A)      &kp LC(S)     &kp LG(D)     &trans     &trans                &kp BACKSPACE  &kp LS(N1)     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&trans         &kt LC(X)     &kp LC(C)     &kp LC(V)  &trans   &trans       &kp DEL        &kp LA(SLASH)  &trans          &kp RC(MINUS)   &kp RC(COLON)    &trans
 &mt LCTRL ESC  &kp LEFT_WIN  &kp LEFT_ALT  &trans     &trans   &kp SPACE    &trans         &trans                                                          &trans
             >;
 
