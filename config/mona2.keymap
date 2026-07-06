@@ -72,12 +72,6 @@
             require-prior-idle-ms = <150>;
         };
 
-        mail {
-            bindings = <&mail_reply>;
-            key-positions = <3 2>;
-            require-prior-idle-ms = <150>;
-        };
-
         ESC_key {
             bindings = <&kp ESC>;
             key-positions = <0 1>;
