@@ -82,6 +82,13 @@
             bindings = <&kp LS(LC(V))>;
             key-positions = <23 24>;
         };
+
+        // 左手親指(34:MB2 + 35:LALT)を押している間、横スクロールレイヤー(11)有効。
+        // 右手でトラックボールを左右に回すとExcel横スクロール(縦スクロールしない)。
+        hscroll {
+            bindings = <&mo 11>;
+            key-positions = <34 35>;
+        };
     };
 
     macros {

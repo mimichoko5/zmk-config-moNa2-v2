@@ -105,11 +105,12 @@
                             &zip_xy_to_scroll_mapper>;
         };
 
-        // Layer 11 (O押下中): Y軸を0倍にして左右スクロールのみ有効化（低速 1/24）
+        // Layer 11 (HSCROLL): Y軸を0倍にして左右(X)のみ横スクロール(縦スクロールしない)
+        // Excel等の横スクロール用。速度は 1/16 (数値を上げると遅くなる)
         hscroll_on_l11 {
             layers = <11>;
             input-processors = <&zip_y_scaler 0 1
-                            &zip_xy_scaler 1 24
+                            &zip_xy_scaler 1 16
                             &zip_xy_to_scroll_mapper>;
         };
     };
