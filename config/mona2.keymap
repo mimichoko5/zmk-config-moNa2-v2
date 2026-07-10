@@ -372,7 +372,7 @@
 &kp LS(LG(S))  &trans  &trans  &trans  &trans                    &trans  &trans        &trans         &trans  &trans
 &trans         &trans  &trans  &trans  &trans            &trans  &trans  &kp LA(LEFT)  &kp LA(RIGHT)  &trans  &trans
 &trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans         &trans  &trans
-&trans         &trans  &trans  &trans  &trans  &trans    &trans  &trans                                       &trans
+&trans         &trans  &trans  &trans  &mo 11  &trans    &trans  &trans                                       &trans
             >;
 
             sensor-bindings = <&scroll_right_left>;
