@@ -75,7 +75,7 @@
         // 右手でトラックボールを左右に回すとExcel横スクロール(縦スクロールしない)。
 
         hscroll {
-            bindings = <&mo 11>;
+            bindings = <&mo 6>;
             key-positions = <0 37>;
         };
     };
@@ -271,7 +271,7 @@
 
         default_layer {
             bindings = <
-&mt LS(LG(S)) Q  &kp W     &kp E         &kp R             &kp T                                        &kp Y                  &kp U  &kp I      &kp O    &hl 6 P
+&mt LS(LG(S)) Q  &kp W     &kp E         &kp R             &kp T                                        &kp Y                  &kp U  &kp I      &kp O    &hl 11 P
 &kp A            &kp S     &kp D         &kp F             &kp G                         &kp BACKSPACE  &kp H                  &kp J  &kp K      &kp L    &kp ENTER
 &kp Z            &kp X     &kp C         &kp V             &kp B             &kp F2      &kp MINUS      &kp N                  &kp M  &kp COMMA  &kp DOT  &hmr RIGHT_SHIFT SLASH
 &hml LCTRL ESC   &mkp MB2  &kp LEFT_ALT  &lt 1 LANGUAGE_2  &lt 2 LANGUAGE_1  &mkp MB1    &mo 3          &mt RIGHT_SHIFT SPACE                             &mo 4
@@ -279,20 +279,6 @@
 
             sensor-bindings = <&scroll_up_down>;
         };
-
-        // Layer 1: 記号 (JIS)
-        // 右手ホーム〜上段：高頻度プログラミング記号  左手：数字直結の低頻度記号
-        //
-        // 左手                                    右手
-        //  trans   &     *    trans  trans  |  trans  @     [    ]   trans
-        //   `      $     %     ^    trans  |   ;     (     )    /    _
-        //  SH/~    !   trans   #   trans   |  trans  {     }   trans trans
-        //  trans   <    trans trans trans  |  trans trans       trans
-        //
-        // JIS keycodes:
-        //   @  = LBKT   [  = RBKT   ] = BSLH   { = LS(RBKT)   } = LS(BSLH)
-        //   (  = LS(N8) )  = LS(N9) ;  = SEMI  : = SQT        / = SLASH
-        //   _  = LS(INT3)  \= INT1  ` = LS(LBKT)  ^ = EQUAL  ~ = LS(EQUAL)
 
         layer_1 {
             bindings = <
@@ -315,12 +301,6 @@
 
             sensor-bindings = <&scroll_up_down>;
         };
-
-        // Layer 3: ナビゲーション＋編集
-        // 左手上段: Esc F2(セル編集) F4(絶対参照) Win+↑
-        // 左手中段: PgUp Win+← Win+↓ Win+→ Ctrl+Win+PrtSc
-        // 左手下段: PgDown
-        // 右手: 矢印/Home/End
 
         layer_3 {
             bindings = <
@@ -355,15 +335,13 @@
             sensor-bindings = <&scroll_up_down>;
         };
 
-        SCROLL {
+        HSCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans        &trans         &trans  &mo 11
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &kp LA(LEFT)  &kp LA(RIGHT)  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans         &trans  &trans
-&trans  &trans  &trans  &trans  &mo 11  &trans    &trans  &trans                                       &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
             >;
-
-            sensor-bindings = <&scroll_right_left>;
         };
 
         Gesture_L7 {
@@ -402,15 +380,15 @@
             >;
         };
 
-        // Layer 11: 横スクロール (O押下中のみ)。トラックボール左右で横スクロール（低速）
-
-        HSCROLL {
+        SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans        &trans         &trans  &mo 6
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &kp LA(LEFT)  &kp LA(RIGHT)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans         &trans  &trans
+&trans  &trans  &trans  &trans  &mo 6   &trans    &trans  &trans                                       &trans
             >;
+
+            sensor-bindings = <&scroll_right_left>;
         };
     };
 };
