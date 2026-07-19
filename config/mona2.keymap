@@ -46,7 +46,7 @@
 
         Gesture_L11 {
             bindings = <&alt_tab_swap>;
-            key-positions = <9 40>;
+            key-positions = <9 39>;
             require-prior-idle-ms = <150>;
         };
 
