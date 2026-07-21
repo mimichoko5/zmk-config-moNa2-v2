@@ -369,19 +369,19 @@
 
         layer_10 {
             bindings = <
-&trans  &trans          &kp UP_ARROW    &trans     &trans                    &trans  &trans    &kp UP_ARROW    &trans           &trans
-&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans            &trans  &trans  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&trans  &trans          &trans          &trans     &trans  &trans    &trans  &trans  &trans    &trans          &trans           &trans
-&trans  &trans          &trans          &trans     &trans  &trans    &trans  &trans                                             &trans
+&trans  &trans          &kp UP_ARROW    &trans     &trans                    &trans  &kp DOWN  &kp UP_ARROW  &trans  &trans
+&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans            &trans  &trans  &kp LEFT  &kp RIGHT     &trans  &trans
+&trans  &trans          &trans          &trans     &trans  &trans    &trans  &trans  &trans    &trans        &trans  &trans
+&trans  &trans          &trans          &trans     &trans  &trans    &trans  &trans                                  &trans
             >;
         };
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans        &trans         &trans  &mo 6
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &kp LA(LEFT)  &kp LA(RIGHT)  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans         &trans  &trans
-&trans  &trans  &trans  &trans  &mo 6   &trans    &trans  &trans                                       &trans
+&trans  &trans           &trans  &trans             &trans                    &trans  &trans        &trans         &trans  &mo 6
+&trans  &kp LC(PAGE_UP)  &trans  &kp LC(PAGE_DOWN)  &trans            &trans  &trans  &kp LA(LEFT)  &kp LA(RIGHT)  &trans  &trans
+&trans  &trans           &trans  &trans             &trans  &trans    &trans  &trans  &trans        &trans         &trans  &trans
+&trans  &trans           &trans  &trans             &mo 6   &trans    &trans  &trans                                       &trans
             >;
 
             sensor-bindings = <&scroll_right_left>;
