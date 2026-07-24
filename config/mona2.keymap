@@ -280,7 +280,7 @@
             bindings = <
 &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp LBKT    &kp LESS_THAN  &kp GREATER_THAN  &kp LS(NUMBER_6)   &trans
 &trans  &trans  &trans  &trans  &trans            &trans  &kp LS(N2)  &kp LS(N8)     &kp LS(N9)        &kp HASH           &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &kp LS(RBKT)   &kp LS(BSLH)      &kp LS(RS(EQUAL))  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &kp RBKT       &kp NUHS          &kp LS(RS(EQUAL))  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                                          &trans
             >;
 
