@@ -270,7 +270,7 @@
 &mt LS(LG(S)) Q  &kp W     &kp E     &kp R             &kp T                                                 &kp Y        &kp U  &kp I      &kp O    &hl 11 P
 &kp A            &kp S     &kp D     &kp F             &kp G                                  &kp BACKSPACE  &kp H        &kp J  &kp K      &kp L    &kp ENTER
 &kp Z            &kp X     &kp C     &kp V             &kp B                      &kp F2      &kp MINUS      &kp N        &kp M  &kp COMMA  &kp DOT  &hmr RIGHT_SHIFT SLASH
-&hml LCTRL ESC   &mkp MB2  &mkp MB2  &lt 1 LANGUAGE_2  &mt LEFT_SHIFT LANGUAGE_1  &mkp MB1    &tog 2         &lt 3 SPACE                             &mo 4
+&hml LCTRL ESC   &mkp MB2  &mkp MB2  &lt 2 LANGUAGE_2  &mt LEFT_SHIFT LANGUAGE_1  &mkp MB1    &mo 1          &lt 3 SPACE                             &mo 4
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -300,9 +300,9 @@
 
         layer_3 {
             bindings = <
-&kp LS(N1)     &kp LC(W)     &kp LG(E)     &kp LC(R)     &kp F12                                     &kp RC(Y)      &kp RC(HOME)    &kp UP_ARROW    &kp RC(END)      &kp LBKT
+&kp LS(N1)     &kp LC(W)     &kp LG(E)     &kp LC(R)     &kp F12                                     &kp LG(LEFT)   &kp RC(HOME)    &kp UP_ARROW    &kp RC(END)      &kp LG(RIGHT)
 &kp LC(A)      &kp LC(S)     &kp LG(D)     &kp LC(F)     &kp F3                       &kp BACKSPACE  &kp LS(N1)     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&kp LC(Z)      &kp RC(X)     &kp LC(C)     &kp LC(V)     &trans          &trans       &kp DEL        &kp LA(SLASH)  &trans          &kp RC(MINUS)   &kp RC(COLON)    &trans
+&kp LC(Z)      &kp RC(X)     &kp LC(C)     &kp LC(V)     &kp F2          &trans       &kp DEL        &kp LA(SLASH)  &trans          &kp RC(MINUS)   &kp RC(COLON)    &trans
 &mt LCTRL ESC  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_SHIFT  &kp SPACE    &trans         &trans                                                          &trans
             >;
 
