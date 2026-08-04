@@ -46,7 +46,7 @@
 
         Gesture_L11 {
             bindings = <&alt_tab_swap>;
-            key-positions = <9 40>;
+            key-positions = <10 37>;
             require-prior-idle-ms = <150>;
         };
 
@@ -369,10 +369,10 @@
 
         layer_10 {
             bindings = <
-&trans  &trans          &kp UP_ARROW    &trans     &trans                    &trans  &kp DOWN  &kp UP_ARROW  &trans  &trans
-&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans            &trans  &trans  &kp LEFT  &kp RIGHT     &trans  &trans
-&trans  &trans          &trans          &trans     &trans  &trans    &trans  &trans  &trans    &trans        &trans  &trans
-&trans  &trans          &trans          &trans     &trans  &trans    &trans  &trans                                  &trans
+&trans  &trans          &kp UP_ARROW    &trans     &trans                    &trans  &trans    &kp UP_ARROW  &trans     &trans
+&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans            &trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans
+&trans  &trans          &trans          &trans     &trans  &trans    &trans  &trans  &trans    &trans        &trans     &trans
+&trans  &trans          &trans          &trans     &trans  &trans    &trans  &trans                                     &trans
             >;
         };
 
