@@ -46,7 +46,7 @@
 
         Gesture_L11 {
             bindings = <&alt_tab_swap>;
-            key-positions = <40 9>;
+            key-positions = <9 40>;
             require-prior-idle-ms = <150>;
         };
 
@@ -71,8 +71,8 @@
         // 右手でトラックボールを左右に回すとExcel横スクロール(縦スクロールしない)。
 
         hscroll {
-            bindings = <&mo 6>;
-            key-positions = <0 37>;
+            bindings = <&kp LG(TAB)>;
+            key-positions = <9 39>;
         };
     };
 
