@@ -333,10 +333,10 @@
 
         HSCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+&trans  &trans            &trans         &trans             &trans                    &trans  &trans            &trans  &trans  &trans
+&trans  &kp LG(LC(LEFT))  &kp LA(SPACE)  &kp LG(LC(RIGHT))  &trans            &trans  &trans  &kp GREATER_THAN  &trans  &trans  &trans
+&trans  &trans            &trans         &trans             &trans  &trans    &trans  &trans  &trans            &trans  &trans  &trans
+&trans  &trans            &trans         &trans             &trans  &trans    &trans  &trans                                    &trans
             >;
         };
 
