@@ -33,7 +33,7 @@
         compatible = "zmk,combos";
 
         Gesture_L8 {
-            bindings = <&lt 8 LA(TAB)>;
+            bindings = <&kp LG(LS(D))>;
             key-positions = <8 9>;
             require-prior-idle-ms = <150>;
         };
