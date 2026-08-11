@@ -4,7 +4,6 @@
 #include <physical_layouts.dtsi>
 #include <zephyr/dt-bindings/pinctrl/nrf-pinctrl.h>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
-#include <mouse-gesture.dtsi>   /* kot149 モジュール */
 
  / {
     chosen {
@@ -97,57 +96,21 @@
             input-processors = <&zip_xy_scaler 0 1>;
         };
 
-        scroll_on_l6 {
+        // Layer 6: Y軸を0倍にして左右(X)のみ横スクロール(縦スクロールしない)
+        hscroll_on_l6 {
             layers = <6>;
-            // X軸を0倍にして上下スクロールのみ有効化
+            input-processors = <&zip_y_scaler 0 1
+                            &zip_xy_scaler 1 16
+                            &zip_xy_to_scroll_mapper>;
+        };
+
+        // Layer 11: X軸を0倍にして上下(Y)のみ縦スクロール(横スクロールしない)
+        vscroll_on_l11 {
+            layers = <11>;
             input-processors = <&zip_x_scaler 0 1
                             &zip_xy_scaler 1 16
                             &zip_xy_transform INPUT_TRANSFORM_Y_INVERT
                             &zip_xy_to_scroll_mapper>;
-        };
-
-        // Layer 11 (O押下中): Y軸を0倍にして左右スクロールのみ有効化（低速 1/24）
-        hscroll_on_l11 {
-            layers = <11>;
-            input-processors = <&zip_y_scaler 0 1
-                            &zip_xy_scaler 1 24
-                            &zip_xy_to_scroll_mapper>;
-        };
-
-        gest_on_l7 {
-            layers = <7>;
-            input-processors = <&zip_mouse_gesture &zip_xy_scaler 0 1>;
-        };
-
-        gest_on_l8 {
-            layers = <8>;
-            input-processors = <&zip_mouse_gesture_l8 &zip_xy_scaler 0 1>;
-        };
-
-        gest_on_l9 {
-            layers = <9>;
-            input-processors = <&zip_mouse_gesture_l9 &zip_xy_scaler 0 1>;
-        };
-
-    };
-
-    layer_listeners {
-        compatible = "zmk,layer-listeners";
-
-        // Layer 7 に入ったらジェスチャーON、抜けたらOFF
-        gesture_on_l7 {
-            layers = <7>;
-            bindings = <&mouse_gesture_on &mouse_gesture_off>;
-        };
-
-        gesture_on_l8 {
-            layers = <8>;
-            bindings = <&mouse_gesture_on &mouse_gesture_off>;
-        };
-
-        gesture_on_l9 {
-            layers = <9>;
-            bindings = <&mouse_gesture_on &mouse_gesture_off>;
         };
     };
 
