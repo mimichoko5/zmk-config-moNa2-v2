@@ -389,8 +389,8 @@
 
         layer_12 {
             bindings = <
-&trans         &trans            &kp LS(LG(D))  &trans             &trans                    &trans  &trans  &trans  &trans  &trans
-&kp LESS_THAN  &kp LG(LC(LEFT))  &kp LA(SPACE)  &kp LG(LC(RIGHT))  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &trans            &kp LA(SPACE)  &trans             &trans                    &trans  &trans  &trans  &trans  &trans
+&kp LESS_THAN  &kp LG(LC(LEFT))  &kp LS(LG(D))  &kp LG(LC(RIGHT))  &trans            &trans  &trans  &trans  &trans  &trans  &trans
 &trans         &trans            &trans         &trans             &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans         &trans            &trans         &trans             &trans  &trans    &trans  &trans                          &trans
             >;
