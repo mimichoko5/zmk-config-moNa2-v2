@@ -394,10 +394,10 @@
 
         layer_12 {
             bindings = <
-&trans         &trans            &kp LA(SPACE)  &trans             &trans                    &trans  &trans  &trans  &trans  &trans
-&kp LESS_THAN  &kp LG(LC(LEFT))  &kp LS(LG(D))  &kp LG(LC(RIGHT))  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans         &trans            &trans         &trans             &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans         &trans            &trans         &trans             &trans  &trans    &trans  &trans                          &trans
+&trans         &trans            &kp LA(SPACE)  &trans             &trans                       &trans  &trans  &trans  &trans  &trans
+&kp LESS_THAN  &kp LG(LC(LEFT))  &kp LS(LG(D))  &kp LG(LC(RIGHT))  &trans               &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &trans            &trans         &trans             &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &trans            &trans         &trans             &kp GRAVE  &trans    &trans  &trans                          &trans
             >;
         };
     };
