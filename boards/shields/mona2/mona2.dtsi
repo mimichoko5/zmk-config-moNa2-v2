@@ -85,34 +85,8 @@
                     <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
     };
 
-    //right hand trackball
-    trackball_central_listener: trackball_central_listener {
-        compatible = "zmk,input-listener";
-        status = "okay";
-        device = <&pmw3610_tb>;
-
-        dpi_low_on_l2 {
-            layers = <2>;
-            input-processors = <&zip_xy_scaler 0 1>;
-        };
-
-        // Layer 6: Y軸を0倍にして左右(X)のみ横スクロール(縦スクロールしない)
-        hscroll_on_l6 {
-            layers = <6>;
-            input-processors = <&zip_y_scaler 0 1
-                            &zip_xy_scaler 1 16
-                            &zip_xy_to_scroll_mapper>;
-        };
-
-        // Layer 11: X軸を0倍にして上下(Y)のみ縦スクロール(横スクロールしない)
-        vscroll_on_l11 {
-            layers = <11>;
-            input-processors = <&zip_x_scaler 0 1
-                            &zip_xy_scaler 1 16
-                            &zip_xy_transform INPUT_TRANSFORM_Y_INVERT
-                            &zip_xy_to_scroll_mapper>;
-        };
-    };
+    // トラックボール(PMW3610)のセンサ定義と input-listener は
+    // 右手側の mona2_r.overlay に集約（左ビルドに幻のSPIデバイスを作らないため）
 
     left_encoder: encoder_left {
         compatible = "alps,ec11";
@@ -134,47 +108,4 @@
 
 };
 
-/* ---------- pinctrl（SPI0 のピン割り当て） ---------- */
-&pinctrl {
-    spi0_default: spi0_default {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK,  0, 13)
-                     NRF_PSEL(SPIM_MOSI, 0, 14)
-                     NRF_PSEL(SPIM_MISO, 0, 15)>;
-        };
-    };
-    spi0_sleep: spi0_sleep {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK,  0, 13)
-                     NRF_PSEL(SPIM_MOSI, 0, 14)
-                     NRF_PSEL(SPIM_MISO, 0, 15)>;
-            low-power-enable;
-        };
-    };
-};
-
-/* ---------- PMW3610（SPI0 配下） ---------- */
-&spi0 {
-    status = "okay";
-    pinctrl-0 = <&spi0_default>;
-    pinctrl-1 = <&spi0_sleep>;
-    pinctrl-names = "default", "sleep";
-    cs-gpios = <&xiao_d 10 GPIO_ACTIVE_LOW>;
-
-    pmw3610_tb: pmw3610@0 {
-        compatible = "pixart,pmw3610";
-        reg = <0>;
-        spi-max-frequency = <2000000>;
-        irq-gpios = <&xiao_d 9 GPIO_ACTIVE_LOW>;
-
-        /* 相対移動（XY）を使う設定 */
-        evt-type      = <INPUT_EV_REL>;
-        x-input-code  = <INPUT_REL_X>;
-        y-input-code  = <INPUT_REL_Y>;
-        //wheel-input-code  = <INPUT_REL_WHEEL>;
-        //hwheel-input-code = <INPUT_REL_HWHEEL>;
-
-        /* cpi = <1600>; */
-        status = "okay";
-    };
-};
+/* SPI0 / pinctrl / PMW3610 センサ定義は mona2_r.overlay に集約 */
