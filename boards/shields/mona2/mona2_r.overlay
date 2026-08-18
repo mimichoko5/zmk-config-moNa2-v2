@@ -52,7 +52,7 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //P0.02を指定(MOTION)
-        cpi = <1000>;  // 追従速度の調整値(600=鈍い / 1600=速すぎ → 1000で調整)
+        cpi = <600>;  // L0基準速度(センサ全体の解像度)
         //swap-xy;
         invert-x; //COROPIT版ではコメントアウトを外す
         //invert-y; //COROPIT版ではコメントアウトを外す
@@ -79,10 +79,8 @@
 
         //input-processors = <&zip_temp_layer 5 10000>; // AML無効化
 
-        dpi_low_on_l2 {
-            layers = <2>;
-            input-processors = <&zip_xy_scaler 0 1>;
-        };
+        // L2/L3 はプロセッサを持たせず、L0と同じ素のカーソル移動にする
+        // (旧: dpi_low_on_l2 / disable_on_l3 で移動量0倍=無効化していたのを撤去)
 
         // Layer 6: Y軸を0倍にして左右(X)のみ横スクロール(縦スクロールしない)
         hscroll_on_l6 {
@@ -99,12 +97,6 @@
                             &zip_xy_scaler 1 16
                             &zip_xy_transform INPUT_TRANSFORM_Y_INVERT
                             &zip_xy_to_scroll_mapper>;
-        };
-
-        // Layer 3: 移動量0倍でトラックボール無効化
-        disable_on_l3 {
-            layers = <3>;
-            input-processors = <&zip_xy_scaler 0 1>;
         };
     };
 };
