@@ -310,10 +310,10 @@
 
         layer_3 {
             bindings = <
-&kp LS(N1)     &kp LC(W)     &kp LG(E)     &kp LC(R)     &kp F12                                     &kp LS(N8)     &kp RC(HOME)    &kp UP_ARROW    &kp RC(END)      &kp LS(N9)
-&kp LC(A)      &kp LC(S)     &kp LG(D)     &kp LC(F)     &kp LA(F11)                  &kp BACKSPACE  &kp LS(N1)     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&kp LC(Z)      &kp RC(X)     &kp LC(C)     &kp LC(V)     &kp F2          &trans       &kp DEL        &kp LA(SLASH)  &trans          &kp RC(MINUS)   &kp RC(COLON)    &trans
-&mt LCTRL ESC  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_SHIFT  &kp SPACE    &trans         &trans                                                          &trans
+&kp LS(N1)     &kp LC(W)     &kp LG(E)     &kp LC(R)     &kp F12                                      &trans         &kp RC(HOME)    &kp UP_ARROW    &kp RC(END)      &trans
+&kp LC(A)      &kp LC(S)     &kp LG(D)     &kp LC(F)     &kp LS(N8)                    &kp BACKSPACE  &kp LS(N9)     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&kp LC(Z)      &kp RC(X)     &kp LC(C)     &kp LC(V)     &kp F2          &trans        &kp DEL        &kp LA(SLASH)  &trans          &kp RC(MINUS)   &kp RC(COLON)    &trans
+&mt LCTRL ESC  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_SHIFT  &kp LS(N9)    &trans         &trans                                                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
