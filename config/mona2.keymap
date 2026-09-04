@@ -89,6 +89,11 @@
             bindings = <&kp LS(MINUS)>;
             key-positions = <13 12>;
         };
+
+        keisikiharituke {
+            bindings = <&kp LC(LA(V))>;
+            key-positions = <23 22>;
+        };
     };
 
     macros {
