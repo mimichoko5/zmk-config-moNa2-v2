@@ -80,9 +80,14 @@
             key-positions = <13 14>;
         };
 
-        KP_EQUA {
+        KP_sum {
             bindings = <&kp LA(LS(MINUS))>;
             key-positions = <12 11>;
+        };
+
+        KP_EQUA {
+            bindings = <&kp LS(MINUS)>;
+            key-positions = <13 12>;
         };
     };
 
