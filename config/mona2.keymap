@@ -315,10 +315,10 @@
 
         layer_3 {
             bindings = <
-&kp LS(N1)     &kp LC(W)     &kp LG(E)     &kp LC(R)     &kp KP_MULTIPLY                                  &kp RBKT    &kp RC(HOME)    &kp UP_ARROW    &kp RC(END)      &kp NUHS
-&kp LC(A)      &kp LC(S)     &kp LG(D)     &kp LC(F)     &kp COLON                         &kp BACKSPACE  &kp LS(N8)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&kp LC(Z)      &kp RC(X)     &kp LC(C)     &kp LC(V)     &kp SLASH        &trans           &kp DEL        &kp LS(N9)  &kp F2          &kp RC(MINUS)   &kp RC(COLON)    &trans
-&mt LCTRL ESC  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_SHIFT   &kp LS(MINUS)    &trans         &trans                                                       &trans
+&kp LS(N1)     &kp LC(W)     &kp LG(E)     &kp LC(R)     &kp KP_MULTIPLY                              &kp RBKT    &kp RC(HOME)    &kp UP_ARROW    &kp RC(END)      &kp NUHS
+&kp LC(A)      &kp LC(S)     &kp LG(D)     &kp LC(F)     &kp COLON                     &kp BACKSPACE  &kp LS(N8)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&kp LC(Z)      &kp RC(X)     &kp LC(C)     &kp LC(V)     &kp SLASH        &trans       &kp DEL        &kp LS(N9)  &kp F2          &kp RC(MINUS)   &kp RC(COLON)    &trans
+&mt LCTRL ESC  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_SHIFT   &kp MINUS    &trans         &trans                                                       &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
