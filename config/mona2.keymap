@@ -293,10 +293,10 @@
 
         layer_1 {
             bindings = <
-&kp N1  &kp N2  &kp N3  &kp N4  &kp LS(Q)                    &kp LBKT    &kp LESS_THAN  &kp GREATER_THAN  &kp LS(NUMBER_6)   &trans
-&trans  &trans  &trans  &trans  &trans               &trans  &kp LS(N2)  &kp LS(N8)     &kp LS(N9)        &kp HASH           &trans
-&trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans      &kp RBKT       &kp NUHS          &kp LS(RS(EQUAL))  &trans
-&trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans                                                          &trans
+&kp N1  &kp N2  &kp N3      &kp N4   &kp LS(Q)                    &kp LBKT    &kp LESS_THAN  &kp GREATER_THAN  &trans             &trans
+&trans  &trans  &kp LA(F8)  &kp F12  &kp F2               &trans  &kp LS(N2)  &kp LS(N8)     &kp LS(N9)        &kp HASH           &trans
+&trans  &trans  &trans      &trans   &trans     &trans    &trans  &kp LS(F6)  &kp RBKT       &kp NUHS          &kp LS(RS(EQUAL))  &trans
+&trans  &trans  &trans      &trans   &trans     &trans    &trans  &trans                                                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LA(TAB) LS(LA(TAB))>;
@@ -315,13 +315,13 @@
 
         layer_3 {
             bindings = <
-&kp LS(N1)     &kp LC(W)     &kp LG(E)     &kp LC(R)     &kp F12                                      &kp LS(N8)  &kp RC(HOME)    &kp UP_ARROW    &kp RC(END)      &kp LS(N9)
-&kp LC(A)      &kp LC(S)     &kp LG(D)     &kp LC(F)     &kp LS(N8)                    &kp BACKSPACE  &kp RBKT    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&kp LC(Z)      &kp RC(X)     &kp LC(C)     &kp LC(V)     &kp F2          &trans        &kp DEL        &kp NUHS    &trans          &kp RC(MINUS)   &kp RC(COLON)    &trans
-&mt LCTRL ESC  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_SHIFT  &kp LS(N9)    &trans         &trans                                                       &trans
+&kp LS(N1)     &kp LC(W)     &kp LG(E)     &kp LC(R)     &kp KP_MULTIPLY                                  &kp RBKT    &kp RC(HOME)    &kp UP_ARROW    &kp RC(END)      &kp NUHS
+&kp LC(A)      &kp LC(S)     &kp LG(D)     &kp LC(F)     &kp COLON                         &kp BACKSPACE  &kp LS(N8)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&kp LC(Z)      &kp RC(X)     &kp LC(C)     &kp LC(V)     &kp SLASH        &trans           &kp DEL        &kp LS(N9)  &kp F2          &kp RC(MINUS)   &kp RC(COLON)    &trans
+&mt LCTRL ESC  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_WIN  &kp LEFT_SHIFT   &kp LS(MINUS)    &trans         &trans                                                       &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         layer_4 {
