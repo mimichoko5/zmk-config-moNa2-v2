@@ -298,10 +298,10 @@
 
         layer_1 {
             bindings = <
-&kp N1  &kp N2  &kp N3      &kp N4   &kp LS(Q)                    &kp LBKT    &kp LESS_THAN  &kp GREATER_THAN  &kp N0             &trans
-&trans  &trans  &kp LA(F8)  &kp F12  &kp F2               &trans  &kp LS(N2)  &kp LS(N8)     &kp LS(N9)        &kp HASH           &trans
-&trans  &trans  &trans      &trans   &trans     &trans    &trans  &kp LS(F6)  &kp RBKT       &kp NUHS          &kp LS(RS(EQUAL))  &trans
-&trans  &trans  &trans      &trans   &trans     &trans    &trans  &trans                                                          &trans
+&kp N1  &kp N2     &kp N3      &kp N4     &kp LS(Q)                    &kp LBKT    &kp LESS_THAN  &kp GREATER_THAN  &kp N0             &trans
+&trans  &trans     &kp LA(F8)  &kp F12    &kp F2               &trans  &kp LS(N2)  &kp LS(N8)     &kp LS(N9)        &kp HASH           &trans
+&trans  &kp LC(X)  &kp LC(C)   &kp LC(V)  &trans     &trans    &trans  &kp LS(F6)  &kp RBKT       &kp NUHS          &kp LS(RS(EQUAL))  &trans
+&trans  &trans     &trans      &trans     &trans     &trans    &trans  &trans                                                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LA(TAB) LS(LA(TAB))>;
