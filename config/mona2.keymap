@@ -309,10 +309,10 @@
 
         layer_2 {
             bindings = <
-&kp LS(Q)  &trans           &trans          &trans     &trans                           &kp LS(INTERNATIONAL_1)  &kp N7  &kp N8  &kp N9  &kp N0
-&kp SLASH  &kp KP_MULTIPLY  &kp MINUS       &kp COLON  &trans            &kp BACKSPACE  &kp SQT                  &kp N4  &kp N5  &kp N6  &trans
-&trans     &trans           &trans          &trans     &trans  &trans    &kp DEL        &kp SLASH                &kp N1  &kp N2  &kp N3  &kp DOT
-&kp LCTRL  &kp LS(LC(N2))   &kp LS(LC(N1))  &trans     &trans  &trans    &kp COMMA      &kp N0                                           &trans
+&kp LS(Q)  &trans           &trans          &trans     &trans                               &kp LS(INTERNATIONAL_1)  &kp N7  &kp N8  &kp N9  &kp N0
+&kp SLASH  &kp KP_MULTIPLY  &kp MINUS       &kp COLON  &kp LS(N5)            &kp BACKSPACE  &kp SQT                  &kp N4  &kp N5  &kp N6  &trans
+&trans     &trans           &trans          &trans     &trans      &trans    &kp DEL        &kp SLASH                &kp N1  &kp N2  &kp N3  &kp DOT
+&kp LCTRL  &kp LS(LC(N2))   &kp LS(LC(N1))  &trans     &trans      &trans    &kp COMMA      &kp N0                                           &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -389,10 +389,10 @@
 
         layer_10 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &kp RBKT    &kp NUHS    &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &kp LS(N8)  &kp LS(N9)  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans      &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                  &trans
+&trans  &trans  &trans  &trans      &trans                        &trans  &kp RBKT    &kp NUHS    &trans  &trans
+&trans  &trans  &trans  &kp LS(N6)  &kp LS(N7)            &trans  &trans  &kp LS(N8)  &kp LS(N9)  &trans  &trans
+&trans  &trans  &trans  &trans      &trans      &trans    &trans  &trans  &trans      &trans      &trans  &trans
+&trans  &trans  &trans  &trans      &trans      &trans    &trans  &trans                                  &trans
             >;
         };
 
