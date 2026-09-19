@@ -389,10 +389,10 @@
 
         layer_10 {
             bindings = <
-&trans  &trans          &kp UP_ARROW    &trans     &trans                    &trans  &trans    &kp UP_ARROW  &trans     &trans
-&trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans            &trans  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans
-&trans  &trans          &trans          &trans     &trans  &trans    &trans  &trans  &trans    &trans        &trans     &trans
-&trans  &trans          &trans          &trans     &trans  &trans    &trans  &trans                                     &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &kp RBKT    &kp NUHS    &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &kp LS(N8)  &kp LS(N9)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans      &trans      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                  &trans
             >;
         };
 
